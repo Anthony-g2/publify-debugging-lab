@@ -62,11 +62,11 @@ function set_widerea(element) {
 }
 
 function tag_manager() {
-  var tagApi = jQuery("#article_keywords").tagsManager({
+  var tagApi = $("#article_keywords").tagsManager({
     prefilled: $('#article_keywords').val()
   });
 
-  jQuery("#article_keywords").typeahead({
+  $("#article_keywords").typeahead({
     name: 'tags',
     limit: 15,
     prefetch: '/admin/content/auto_complete_for_article_keywords'
@@ -76,7 +76,7 @@ function tag_manager() {
 }
 
 function save_article_tags() {
-  $('#article_keywords').val($('#article_form').find('input[name="hidden-article[keywords]"]'));
+  $('#article_keywords').val($('#article_form').find('input[name="hidden-article[keywords]"]').val());
 }
 
 function doneTyping () {
